@@ -31,20 +31,23 @@ jobs:
         cd frontend
         npm run build
         
-    - name: Prepare deployment
+    - name: Prepare deployment files
       run: |
-        cd frontend/dist
-        # Create .nojekyll file to prevent Liquid processing
-        touch .nojekyll
-        # Copy CNAME file if it exists
-        if [ -f ../../CNAME ]; then
-          cp ../../CNAME .
+        # Create a clean deployment directory
+        mkdir -p deployment
+        # Copy only the built files, excluding node_modules and source files
+        cp -r frontend/dist/* deployment/
+        # Copy CNAME if it exists
+        if [ -f CNAME ]; then
+          cp CNAME deployment/
         fi
+        # Ensure .nojekyll is present
+        touch deployment/.nojekyll
         
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./frontend/dist
+        publish_dir: ./deployment
         cname: hugscape.co.in
