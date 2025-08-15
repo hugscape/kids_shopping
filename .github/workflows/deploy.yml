@@ -31,23 +31,9 @@ jobs:
         cd frontend
         npm run build
         
-    - name: Prepare deployment files
-      run: |
-        # Create a clean deployment directory
-        mkdir -p deployment
-        # Copy only the built files, excluding node_modules and source files
-        cp -r frontend/dist/* deployment/
-        # Copy CNAME if it exists
-        if [ -f CNAME ]; then
-          cp CNAME deployment/
-        fi
-        # Ensure .nojekyll is present
-        touch deployment/.nojekyll
-        
     - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+      uses: JamesIves/github-pages-deploy-action@v4
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./deployment
-        cname: hugscape.co.in
+        branch: gh-pages
+        folder: frontend/dist
+        clean: true
