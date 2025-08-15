@@ -1,0 +1,13 @@
+com/hugscape/service/JwtService.class
+com/hugscape/controller/AuthController.class
+com/hugscape/controller/ProductController.class
+com/hugscape/config/SecurityConfig.class
+com/hugscape/entity/Product.class
+com/hugscape/service/UserService.class
+com/hugscape/KidsShoppingApplication$1.class
+com/hugscape/KidsShoppingApplication.class
+com/hugscape/service/ProductService.class
+com/hugscape/repository/UserRepository.class
+com/hugscape/repository/ProductRepository.class
+com/hugscape/entity/User.class
+com/hugscape/config/DataInitializer.class

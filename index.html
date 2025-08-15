@@ -9,38 +9,212 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: #fff8f0;
+            background: #f3e6f7;
             text-align: center;
         }
         header {
-            padding: 2rem;
-            background: #ffb6b9;
-            color: white;
+            background: #ffe6f2;
+            padding: 2.5rem 1rem 1.5rem 1rem;
+            border-bottom: 4px solid #ffe082;
         }
         h1 {
-            margin: 0;
+            color: #2d3559;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
         }
         p {
-            color: #444;
+            color: #4a4e69;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
         }
         footer {
-            padding: 1rem;
-            background: #ddd;
+            background: #bdb2ff;
+            color: #2d3559;
+            padding: 1.2rem 0;
             margin-top: 2rem;
+            font-size: 1rem;
+        }
+        /* Additional styles for the revamped homepage */
+        img {
+            width: 140px;
+            margin-bottom: 1rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        main {
+            padding: 2rem 1rem;
+        }
+        section {
+            background: #fffbe7;
+            border-radius: 1.5rem;
+            box-shadow: 0 2px 12px #e0c3fc33;
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem 1.5rem;
+        }
+        h2 {
+            color: #2d3559;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            color: #4a4e69;
+            font-size: 1.1rem;
+            text-align: left;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        li {
+            margin-bottom: 1rem;
+        }
+        li b {
+            color: #2d3559;
+        }
+        form {
+            margin-top: 1rem;
+        }
+        input[type="email"] {
+            padding: 0.7rem 1rem;
+            border-radius: 2rem;
+            border: 1px solid #bdb2ff;
+            font-size: 1rem;
+            width: 65%;
+            max-width: 260px;
+            margin-right: 0.5rem;
+        }
+        button {
+            background: #ffe082;
+            color: #2d3559;
+            border: none;
+            border-radius: 2rem;
+            padding: 0.7rem 1.5rem;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        /* Navigation bar styles */
+        nav {
+            background: #bdb2ff;
+            padding: 0.7rem 0;
+            box-shadow: 0 2px 8px #e0c3fc33;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2.2rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            font-size: 1.1rem;
+        }
+        nav a {
+            color: #2d3559;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav li {
+            position: relative;
+        }
+        nav li ul {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 2rem;
+            background: #ffe6f2;
+            border-radius: 0.7rem;
+            box-shadow: 0 2px 8px #e0c3fc33;
+            padding: 0.7rem 0;
+            min-width: 150px;
+            list-style: none;
+        }
+        nav li ul li a {
+            display: block;
+            padding: 0.5rem 1.2rem;
+        }
+        nav .cart-account {
+            color: #fffbe7;
+            background: #2d3559;
+            border-radius: 2rem;
+            padding: 0.4rem 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li>
+                <a href="#">Shop ▾</a>
+                <ul>
+                    <li><a href="#">Boys</a></li>
+                    <li><a href="#">Girls</a></li>
+                    <li><a href="#">Nightwear</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Best Sellers</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Collections ▾</a>
+                <ul>
+                    <li><a href="#">Ikkat Collection</a></li>
+                    <li><a href="#">Festive Wear</a></li>
+                    <li><a href="#">Summer Collection</a></li>
+                </ul>
+            </li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Size Guide</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#" class="cart-account">Cart</a></li>
+            <li><a href="#">Account</a></li>
+        </ul>
+    </nav>
     <header>
-        <h1>Welcome to Hugscape</h1>
-        <p>Soft, pure cotton nightwear with Ikkat designs – made for kids to dream in comfort.</p>
+        <img src="logo.png" alt="Hugscape Logo" />
+        <h1>Hugscape</h1>
+        <p>Snuggle Up to the Moon</p>
+        <p>Soft, pure cotton nightwear in vibrant Ikkat patterns. Inspired by Indian tradition, made for magical dreams and gentle hugs. Perfect for your little ones’ bedtime adventures.</p>
     </header>
     <main>
-        <h2>Coming Soon!</h2>
-        <p>We’re working on something magical for your little ones.</p>
+        <section>
+            <h2>Why Hugscape?</h2>
+            <ul>
+                <li>🌙 <b>Tradition Meets Comfort:</b> Handcrafted Ikkat nightwear, blending Indian heritage with modern softness.</li>
+                <li>☁️ <b>Pure Cotton:</b> Breathable, gentle fabrics for sensitive skin and peaceful sleep.</li>
+                <li>💤 <b>Adorable Designs:</b> Playful patterns and soothing colors inspired by bedtime stories.</li>
+                <li>🧒 <b>Made for Kids:</b> Easy fits, safe stitching, and lots of room for snuggles!</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Launching Soon!</h3>
+            <p>Sign up to get early access, exclusive offers, and bedtime tips for happy little dreamers.</p>
+            <form>
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">Notify Me</button>
+            </form>
+        </section>
     </main>
     <footer>
-        &copy; 2025 Hugscape. All rights reserved.
+        &copy; 2025 Hugscape. All rights reserved. | Made with <span style="color: #ffb6b9;">♥</span> for little dreamers.
     </footer>
+    <script>
+        // Simple dropdown menu logic
+        document.querySelectorAll('nav ul > li').forEach(function(menuItem) {
+            menuItem.addEventListener('mouseenter', function() {
+                var dropdown = menuItem.querySelector('ul');
+                if (dropdown) dropdown.style.display = 'block';
+            });
+            menuItem.addEventListener('mouseleave', function() {
+                var dropdown = menuItem.querySelector('ul');
+                if (dropdown) dropdown.style.display = 'none';
+            });
+        });
+    </script>
 </body>
 </html>
