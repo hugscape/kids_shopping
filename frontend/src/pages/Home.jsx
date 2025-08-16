@@ -28,6 +28,8 @@ const Home = () => {
     }
   ];
 
+  console.log('Home.jsx: Home component rendered');
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}

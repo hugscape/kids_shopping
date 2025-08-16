@@ -12,6 +12,8 @@ import { useCart } from './contexts/CartContext';
 function App() {
   const { isOpen, closeCart } = useCart();
 
+  console.log('App.jsx: App component rendered');
+
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
